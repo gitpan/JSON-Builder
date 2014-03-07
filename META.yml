@@ -20,5 +20,5 @@ no_index:
 requires:
   Compress::Zlib: 0
   JSON::XS: 0
-  MIME::Base64: 0
-version: 0.01
+  MIME::Base64: 3.11
+version: 0.02

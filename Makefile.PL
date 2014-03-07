@@ -10,7 +10,7 @@ WriteMakefile(
     PREREQ_PM         => { 
 		'JSON::XS'       => 0,
 		'Compress::Zlib' => 0,
-		'MIME::Base64'   => 0,
+		'MIME::Base64'   => 3.11,
 	}, # e.g., Module::Name => 1.1
 	PM => { "JSON/Builder.pm" => "\$(INST_LIB)/JSON/Builder.pm" },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
