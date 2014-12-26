@@ -1,11 +1,10 @@
 use 5.008008;
 use ExtUtils::MakeMaker;
 
-my %pm = map { $_ => "\$(INST_LIB)/$_" } ('IPC/MPS.pm', 'IPC/MPS/Event.pm', 'IPC/MPS/EV.pm');
-
 
 WriteMakefile(
     NAME              => 'JSON::Builder',
+	LICENSE           => "perl",
     VERSION_FROM      => 'JSON/Builder.pm', # finds $VERSION
     PREREQ_PM         => { 
 		'JSON::XS'       => 0,

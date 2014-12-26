@@ -168,7 +168,7 @@ package JSON::Builder;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Carp;
 use File::Temp qw(tempfile tempdir);
@@ -326,7 +326,13 @@ sub add {
 sub end {
 	my $self = shift;
 	my $fh = $$self{fh};
+
+	if ($$self{first}) {
+		$$self{first} = 0;
+		print $fh "[";
+	}
 	print $fh "]";
+
 	$fh->flush;
 	$fh->seek(0,0);
 	return $fh;
@@ -381,7 +387,13 @@ sub add {
 sub end {
 	my $self = shift;
 	my $fh = $$self{fh};
+
+	if ($$self{first}) {
+		$$self{first} = 0;
+		print $fh "{";
+	}
 	print $fh "}";
+
 	$fh->flush;
 	$fh->seek(0,0);
 	return $fh;

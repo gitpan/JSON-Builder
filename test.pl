@@ -37,6 +37,8 @@ sub foo {
 		v   => $fv,
 		l   => $fl,
 		o   => $fo,
+		zl  => $builder->list()->end(),
+		zo  => $builder->obj()->end(),
 	);
 
 	$builder->encode(\%d);
@@ -58,6 +60,8 @@ my $j = {
 		o1 => ['a', 'b'],
 		o2 => ['c', 'd'],
 	},
+	zl => [],
+	zo => {},
 };
 
 

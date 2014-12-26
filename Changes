@@ -1,4 +1,7 @@
 Revision history for JSON::Builder.
 
+0.03  2014-05-20
+	- fix for empty lists and objects
+
 0.02  2014-03-07
-	- version of MIME::Base64
+	- version with MIME::Base64
